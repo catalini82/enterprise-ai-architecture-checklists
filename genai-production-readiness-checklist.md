@@ -2,6 +2,10 @@
 
 A practical checklist for reviewing whether a GenAI system is ready to move beyond demo or prototype stage.
 
+This is a working checklist, not a final production framework. I use it to structure the questions I would ask before recommending or approving a GenAI system for production use.
+
+The checklist is intentionally broad. Some items apply more to RAG systems, some to agentic systems, and some to simple LLM-powered applications. The goal is to avoid treating the model alone as the whole solution.
+
 ## 1. Business and use-case clarity
 
 * [ ] The business problem is clearly defined.
