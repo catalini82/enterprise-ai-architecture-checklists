@@ -2,6 +2,10 @@
 
 A practical checklist for reviewing whether the infrastructure behind an AI system is ready for real usage.
 
+This is a working checklist, not a complete production framework. I use it to structure the infrastructure questions I would ask before recommending that an AI workload moves from experiment or prototype into a more serious environment.
+
+The focus is on the systems around the model: compute, GPU capacity, deployment, model serving, storage, observability, reliability, security, and cost. Some items are more relevant to local or self-hosted models, while others apply more to cloud APIs or enterprise platforms.
+
 ## 1. Deployment environment
 
 * [ ] The target deployment environment is defined.
@@ -54,6 +58,7 @@ A practical checklist for reviewing whether the infrastructure behind an AI syst
 * [ ] Runtime choice is documented.
 * [ ] Serving runtime packaging is defined.
 * [ ] Model loading time is understood.
+* [ ] Cold start and warm-up behavior is understood.
 * [ ] Inference latency is measured.
 * [ ] Throughput is measured.
 * [ ] Context window limits are understood.
@@ -110,6 +115,8 @@ A practical checklist for reviewing whether the infrastructure behind an AI syst
 * [ ] Identity and access management is defined.
 * [ ] Least-privilege access is applied.
 * [ ] Secrets are stored securely.
+* [ ] Secret rotation requirements are defined.
+* [ ] API keys and provider credentials have an ownership and rotation process.
 * [ ] Data encryption requirements are reviewed.
 * [ ] Logging does not expose sensitive information.
 * [ ] Audit requirements are understood.
@@ -121,6 +128,8 @@ A practical checklist for reviewing whether the infrastructure behind an AI syst
 * [ ] Cost drivers are identified.
 * [ ] Budget alerts are configured.
 * [ ] Token, API, GPU, and storage costs are tracked.
+* [ ] Network egress and data transfer costs are considered.
+* [ ] Large model download and artifact storage costs are considered.
 * [ ] Idle resource waste is reviewed.
 * [ ] Operational ownership is assigned.
 * [ ] Support and escalation paths are defined.
